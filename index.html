@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Cooper R56 - Oportunidad & Promociones</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 10px;
+            min-height: 100vh;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .header h1 {
+            font-size: 26px;
+            color: #38bdf8;
+            margin-bottom: 8px;
+        }
+        .header p {
+            color: #94a3b8;
+            font-size: 14px;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+            width: 100%;
+            max-width: 800px;
+            margin-bottom: 30px;
+        }
+        .card-car {
+            background: #1e293b;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #334155;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+        .card-car img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        .card-car .info {
+            padding: 15px;
+        }
+        .card-car h3 {
+            font-size: 18px;
+            margin-bottom: 6px;
+            color: #f1f5f9;
+        }
+        .card-car p {
+            font-size: 13px;
+            color: #cbd5e1;
+            line-height: 1.4;
+        }
+
+        /* Sección Buscador */
+        .search-box {
+            background: #1e293b;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #334155;
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+        .search-box h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #38bdf8;
+        }
+        .search-box p {
+            font-size: 13px;
+            color: #94a3b8;
+            margin-bottom: 15px;
+        }
+        .input-group {
+            margin-bottom: 15px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #475569;
+            background: #0f172a;
+            color: #fff;
+            border-radius: 6px;
+            font-size: 16px;
+            outline: none;
+        }
+        input[type="text"]:focus {
+            border-color: #38bdf8;
+        }
+        .btn-search {
+            background-color: #0284c7;
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+        .btn-search:hover {
+            background-color: #0369a1;
+        }
+        #resultado {
+            margin-top: 15px;
+            text-align: left;
+            background: #0f172a;
+            padding: 15px;
+            border-radius: 6px;
+            display: none;
+            border: 1px solid #334155;
+        }
+        .error { color: #f87171; font-weight: bold; }
+        .success { color: #4ade80; }
+
+        /* Packs y WhatsApp */
+        .packs-container {
+            width: 100%;
+            max-width: 800px;
+            margin-bottom: 30px;
+        }
+        .packs-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #38bdf8;
+        }
+        .packs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 15px;
+        }
+        .pack-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .pack-card h3 {
+            font-size: 18px;
+            color: #f8fafc;
+            margin-bottom: 10px;
+        }
+        .pack-card .price {
+            font-size: 22px;
+            font-weight: bold;
+            color: #4ade80;
+            margin-bottom: 15px;
+        }
+        .btn-whatsapp {
+            background-color: #25d366;
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 6px;
+            font-weight: bold;
+            display: inline-block;
+            transition: 0.2s;
+        }
+        .btn-whatsapp:hover {
+            background-color: #1da851;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Mini Cooper R56 Hatchback</h1>
+        <p>Edición Pepper White - Excelente Estado</p>
+    </div>
+
+    <!-- Galería del Vehículo -->
+    <div class="gallery">
+        <div class="card-car">
+            <img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&w=800&q=80" alt="Mini Cooper R56">
+            <div class="info">
+                <h3>Motor 1.6L Atmosférico</h3>
+                <p>Mantenimiento exhaustivo al día, bujías, solenoides VANOS y aceite 5W-30 recién cambiados.</p>
+            </div>
+        </div>
+        <div class="card-car">
+            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80" alt="Mini Cooper Detalle">
+            <div class="info">
+                <h3>Transmisión Automática</h3>
+                <p>Manejo ágil y cómodo. Equipado con diagnóstico OBD2 escaneado sin fallas registradas.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Buscador de DNI -->
+    <div class="search-box">
+        <h2>Consultá tus Códigos Promocionales</h2>
+        <p>Ingresá tu número de DNI sin puntos para verificar tus beneficios.</p>
+        <div class="input-group">
+            <input type="text" id="dni" placeholder="Ej: 29744780">
+        </div>
+        <button class="btn-search" onclick="buscarDni()">Buscar Beneficio</button>
+        <div id="resultado"></div>
+    </div>
+
+    <!-- Packs de Venta & WhatsApp -->
+    <div class="packs-container">
+        <h2>Packs Disponibles</h2>
+        <div class="packs-grid">
+            <div class="pack-card">
+                <h3>Pack Consulta Standar</h3>
+                <p style="color: #cbd5e1; font-size: 13px; margin-bottom: 10px;">Verificación básica de código y reserva de unidad.</p>
+                <div class="price">Consultar</div>
+                <a class="btn-whatsapp" href="https://wa.me/5493810000000?text=Hola!%20Quiero%20consultar%20por%20el%20Pack%20Standar%20del%20Mini%20Cooper" target="_blank">Consultar por WhatsApp</a>
+            </div>
+            <div class="pack-card">
+                <h3>Pack Premium VIP</h3>
+                <p style="color: #cbd5e1; font-size: 13px; margin-bottom: 10px;">Atención prioritaria, prueba de manejo e historial mecánico completo.</p>
+                <div class="price">Consultar</div>
+                <a class="btn-whatsapp" href="https://wa.me/5493810000000?text=Hola!%20Quiero%20más%20información%20sobre%20el%20Pack%20Premium%20VIP" target="_blank">Consultar por WhatsApp</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // URL de tu Google Apps Script (Versión 7)
+        const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbDycJt481DSXiyLWHhHOKbeTKE5TTqQt_1BFvwPCuFIGg1izzM74zrdWEFTL3aQEM/exec";
+
+        function buscarDni() {
+            const dni = document.getElementById('dni').value.trim();
+            const resultadoDiv = document.getElementById('resultado');
+
+            if (!dni) {
+                resultadoDiv.style.display = 'block';
+                resultadoDiv.innerHTML = '<p class="error">Por favor, ingrese un DNI.</p>';
+                return;
+            }
+
+            resultadoDiv.style.display = 'block';
+            resultadoDiv.innerHTML = '<p style="color: #94a3b8;">Buscando...</p>';
+
+            fetch(`${APPS_SCRIPT_URL}?dni=${encodeURIComponent(dni)}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === 'success') {
+                        resultadoDiv.innerHTML = `
+                            <p class="success"><strong>¡Beneficio Encontrado!</strong></p>
+                            <p style="margin-top: 5px; color: #f8fafc;"><strong>Cliente:</strong> ${data.nombre || 'Registrado'}</p>
+                            <p style="color: #f8fafc;"><strong>Código/Detalle:</strong> ${data.promocion || data.codigo || 'Beneficio activo'}</p>
+                        `;
+                    } else {
+                        resultadoDiv.innerHTML = '<p class="error">No se encontraron beneficios asignados a este DNI.</p>';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    resultadoDiv.innerHTML = '<p class="error">Ocurrió un error al consultar. Intente nuevamente.</p>';
+                });
+        }
+    </script>
+</body>
+</html>
